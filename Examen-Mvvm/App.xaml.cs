@@ -1,15 +1,16 @@
-﻿namespace Examen_Mvvm
+﻿using Examen_Mvvm.ViewModels;
+using Examen_Mvvm.Views;
+
+namespace Examen_Mvvm
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
+           MainPage =new NavigationPage(new ProductoView());
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
+        
     }
 }
